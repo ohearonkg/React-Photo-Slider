@@ -4,7 +4,7 @@ import { PhotoIndicator } from '../src/components/PhotoIndicator';
 
 describe('Photo Indicator', () => {
     it('Should Take A Prop Representing The Currently Selected Photos Number And Render It', () => {
-        const wrapper = shallow(<PhotoIndicator currentPhoto='1' totalPhotos='3'/>);
+        const wrapper = shallow(<PhotoIndicator currentPhoto='1'/>); 
         expect(wrapper.html()).toMatch(new RegExp('1'))
     })
 })
