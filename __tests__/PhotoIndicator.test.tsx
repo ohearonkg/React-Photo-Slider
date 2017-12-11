@@ -14,6 +14,11 @@ describe('Photo Indicator', () => {
         expect(wrapper.html()).toMatch(new RegExp('01'))
     });
 
+    it('Should NOT Add A Zero In Front of The Number Representing The Currently Selected Photo Should It Be A Two Digit Number', () => {
+        const wrapper = shallow(<PhotoIndicator currentPhotoNumber={11} totalNumberPhotos={7}/>); 
+        expect(wrapper.html()).not.toMatch(new RegExp('011'))
+    });
+
     it('Should Take A Prop Representing The Total Number of Photos And Render It', () => {
         const wrapper = shallow(<PhotoIndicator currentPhotoNumber={1} totalNumberPhotos={7}/>); 
         expect(wrapper.html()).toMatch(new RegExp('7'))
@@ -22,6 +27,11 @@ describe('Photo Indicator', () => {
     it('Should Add A Zero In Front of The Number Representing The Total Number of Photos Should It Be A Single Digit', () => {
         const wrapper = shallow(<PhotoIndicator currentPhotoNumber={1} totalNumberPhotos={7}/>); 
         expect(wrapper.html()).toMatch(new RegExp('07'))
+    });
+
+    it('Should NOT Add A Zero In Front of The Number Representing The Total Number of Photos Should It Be A Two Digit Number', () => {
+        const wrapper = shallow(<PhotoIndicator currentPhotoNumber={1} totalNumberPhotos={77}/>); 
+        expect(wrapper.html()).not.toMatch(new RegExp('077'))
     });
 
 })
