@@ -28,6 +28,7 @@
   "dependencies": {
     "@types/react": "^16.0.28",
     "@types/react-dom": "^16.0.3",
+    "gsap": "^1.20.3",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
   },

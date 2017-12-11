@@ -4,8 +4,15 @@ export interface PhotoContainerProps {
   photoUrl: string;
 }
 
-export const PhotoContainer = (props:PhotoContainerProps) => {
-  return (
-    <img src={props.photoUrl} />
-  )
+export class PhotoContainer extends React.Component<PhotoContainerProps, {}> {
+
+  componentDidMount() {
+    console.log('Hello');
+  }
+
+  render() {
+    return (
+      <img src={this.props.photoUrl} />
+    )
+  }
 }
