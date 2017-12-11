@@ -8,7 +8,14 @@ module.exports = function(baseConfig, env) {
       {
         test: /\.tsx?$/,
         loader: "awesome-typescript-loader",
+      },
+
+      /* Sass */
+      {
+        test: /\.scss$/,
+        loaders: ["style-loader", "css-loader", "sass-loader"],
       }
+
   );
   config.resolve.extensions.push(".tsx");
   config.resolve.extensions.push(".ts");
