@@ -4,13 +4,14 @@ export interface PhotoIndicatorProps {
     currentPhotoNumber: number;
     totalNumberPhotos: number;
     nextArrowClickFunction: any;
+    previousArrowClickFunction: any;
 }
 
 export const PhotoIndicator = (props: PhotoIndicatorProps) => {
     return (
         <div className='photo-indicator'> 
 
-            <div className='photo-indicator__previous-arrow-container'>
+            <div onClick={props.previousArrowClickFunction} className='photo-indicator__previous-arrow-container'>
                 <svg width="16px" height="12px" viewBox="0 0 16 12" version="1.1" xmlns="http://www.w3.org/2000/svg">
                     <g id="Design" stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
                         <g id="Home-Category" transform="translate(-293.000000, -955.000000)" fill="#FFFFFF" fillRule="nonzero">
