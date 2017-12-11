@@ -1,9 +1,10 @@
 import * as React from 'react';
 
 export interface PhotoIndicatorProps {
-    currentPhoto: string;
+    currentPhotoNumber: string;
+    totalNumberPhotos: string;
 }
 
 export const PhotoIndicator = (props: PhotoIndicatorProps) => {
-    return <div> {props.currentPhoto} </div> 
+    return <div> {props.currentPhotoNumber} of {props.totalNumberPhotos} </div> 
 }
