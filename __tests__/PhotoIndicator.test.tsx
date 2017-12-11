@@ -43,6 +43,11 @@ describe('Photo Indicator', () => {
     });
 
     it('Should Take As A Prop A Function Which Should Be Called When Clicking The Previous Arrow', () => {
+        const previousArrowSampleFunction = sinon.spy();
+        const wrapper = shallow(<PhotoIndicator previousArrowClickFunction={previousArrowSampleFunction} currentPhotoNumber={1} totalNumberPhotos={77}/>); 
+        wrapper.find('.photo-indicator__next-arrow-container').simulate('click');
+        expect(previousArrowSampleFunction['callCount']).toEqual(1);
+
         expect(false).toBeTruthy();
     });
 })
