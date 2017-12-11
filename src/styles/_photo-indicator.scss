@@ -1,0 +1,31 @@
+@import 'variables';
+
+.photo-indicator {
+  display: flex;
+  align-items: center;
+
+  &__previous-arrow-container {
+    flex: 0 0 auto;
+    cursor: pointer;
+  }
+
+  &__text-container {
+    flex: 1 1 auto;
+    padding: 0 15px;
+    font-size: 14px;
+    letter-spacing: 1.12px;
+  }
+
+  &__current-photo-index {
+    color: $black;
+  }
+
+  &__photo-count {
+    color: $grey;
+  }
+
+  &__next-arrow-container {
+    flex: 0 0 auto;
+    cursor: pointer;
+  }
+}
