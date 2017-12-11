@@ -19,4 +19,9 @@ describe('Photo Indicator', () => {
         expect(wrapper.html()).toMatch(new RegExp('7'))
     });
 
+    it('Should Add A Zero In Front of The Number Representing The Total Number of Photos Should It Be A Single Digit', () => {
+        const wrapper = shallow(<PhotoIndicator currentPhotoNumber={1} totalNumberPhotos={7}/>); 
+        expect(wrapper.html()).toMatch(new RegExp('07'))
+    });
+
 })
