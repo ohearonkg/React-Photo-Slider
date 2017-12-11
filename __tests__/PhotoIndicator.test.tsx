@@ -34,4 +34,11 @@ describe('Photo Indicator', () => {
         expect(wrapper.html()).not.toMatch(new RegExp('077'))
     });
 
+    it('Should Take As A Prop A Function Which Should Be Called When Clicking The Next Arrow', () => {
+        expect(false).toBeTruthy();
+    });
+
+    it('Should Take As A Prop A Function Which Should Be Called When Clicking The Previous Arrow', () => {
+        expect(false).toBeTruthy();
+    });
 })
